@@ -12,7 +12,7 @@ class Launcher(TmuxLauncher):
             dataroot="../../input/ffhq-onlyhair-best/images/",
             dataset_mode="imagefolder",
             checkpoints_dir="./checkpoints/",
-            num_gpus=1, batch_size=4,
+            num_gpus=1, batch_size=2,
             preprocess="resize",
             load_size=512, crop_size=512,
         )
