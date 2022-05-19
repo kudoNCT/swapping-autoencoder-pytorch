@@ -9,10 +9,10 @@ class Launcher(TmuxLauncher):
             # and load them as images files.
             # Alternatively, the dataset can be prepared as
             # an LMDB dataset (like LSUN), and set dataset_mode = "lmdb".
-            dataroot="~/datasets/ffhq/images1024x1024/",
+            dataroot="../../input/ffhq-onlyhair-best/images/",
             dataset_mode="imagefolder",
             checkpoints_dir="./checkpoints/",
-            num_gpus=8, batch_size=16,
+            num_gpus=1, batch_size=4,
             preprocess="resize",
             load_size=512, crop_size=512,
         )
@@ -37,7 +37,7 @@ class Launcher(TmuxLauncher):
             opt.tag("swapping_grid").specify(
                 num_gpus=1,
                 batch_size=1,
-                dataroot="./testphotos/ffhq512/fig9/",
+                dataroot="./testphotos/",
                 dataset_mode="imagefolder",
                 evaluation_metrics="structure_style_grid_generation"
             ),
