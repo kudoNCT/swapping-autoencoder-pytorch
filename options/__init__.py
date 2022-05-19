@@ -41,7 +41,7 @@ class BaseOptions():
         # for setting inputs
         parser.add_argument('--dataroot', type=str, default=".")
         parser.add_argument('--dataset_mode', type=str, default='lmdb')
-        parser.add_argument('--nThreads', default=8, type=int, help='# threads for loading data')
+        parser.add_argument('--nThreads', default=1, type=int, help='# threads for loading data')
 
         # networks
         parser.add_argument("--netG", default="StyleGAN2Resnet")

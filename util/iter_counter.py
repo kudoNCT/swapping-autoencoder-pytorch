@@ -7,8 +7,7 @@ import time
 class IterationCounter():
     @staticmethod
     def modify_commandline_options(parser, is_train):
-        parser.add_argument("--total_nimgs", default=25 *
-                            (1000 ** 2), type=int)
+        parser.add_argument("--total_nimgs", default=100000, type=int)
         parser.add_argument("--save_freq", default=50000, type=int)
         parser.add_argument("--evaluation_freq", default=50000, type=int)
         parser.add_argument("--print_freq", default=480, type=int)
